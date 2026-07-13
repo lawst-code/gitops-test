@@ -1,0 +1,13 @@
+apiVersion: noxus/v4
+kind: flow
+metadata:
+  description: null
+  id: fd0068ae-81b4-4539-83c4-a6f3f3b63892
+  labels: {}
+  name: Untitled flow
+  slug: untitled-flow-fd0068ae
+schemaVersion: 1
+spec:
+  edges: []
+  flow_version: v2
+  nodes: []

@@ -1,0 +1,260 @@
+apiVersion: noxus/v4
+kind: flow
+metadata:
+  description: null
+  id: f5448b19-7f63-49e6-9824-7ed5fdb86572
+  labels: {}
+  name: 432t
+  slug: 432t-f5448b19
+schemaVersion: 1
+spec:
+  edges:
+  - from_id:
+      connector_name: output
+      node_id: 67361bec-1c60-4fac-8f14-5b50d849c9ba
+    to_id:
+      connector_name: variables
+      key: Input 1
+      node_id: f6f9fdf9-c5d5-4b80-b4a8-75d574fd78f2
+  - from_id:
+      connector_name: text_output
+      node_id: f6f9fdf9-c5d5-4b80-b4a8-75d574fd78f2
+    to_id:
+      connector_name: input
+      node_id: 0f00075e-df90-4bf7-9755-92773b2ab0ef
+  nodes:
+  - connector_config:
+      inputs:
+      - choices:
+        - data_type: str
+          is_list: false
+        - data_type: number
+          is_list: false
+        - data_type: bool
+          is_list: false
+        - data_type: datetime
+          is_list: false
+        - data_type: object
+          is_list: false
+        - data_type: dict
+          is_list: false
+        - data_type: Image
+          is_list: false
+        - data_type: Audio
+          is_list: false
+        - data_type: File
+          is_list: false
+        configured_by: type
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Input
+        name: input
+        optional: false
+        propagates_list: true
+        rules:
+        - config_source: type
+          type: type_set_by
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_type_input
+        visible: true
+      outputs:
+      - choices:
+        - data_type: str
+          is_list: false
+        - data_type: number
+          is_list: false
+        - data_type: bool
+          is_list: false
+        - data_type: datetime
+          is_list: false
+        - data_type: object
+          is_list: false
+        - data_type: dict
+          is_list: false
+        - data_type: Image
+          is_list: false
+        - data_type: Audio
+          is_list: false
+        - data_type: File
+          is_list: false
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Output
+        name: output
+        optional: false
+        propagates_list: true
+        rules:
+        - config_source: type
+          type: type_set_by
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_type_connector
+        visible: true
+    display:
+      position:
+        x: 583
+        y: 416
+      size: {}
+    id: 67361bec-1c60-4fac-8f14-5b50d849c9ba
+    name: Input 1
+    node_config:
+      label: Input 1
+    type: InputNode
+  - connector_config:
+      inputs:
+      - allow_empty: false
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        keys:
+        - Input 1
+        label: Variables
+        manual: true
+        name: variables
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_connector
+        visible: true
+      outputs:
+      - definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Text
+        name: text_output
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: true
+      - definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: On error
+        name: on_error
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: false
+    display:
+      position:
+        x: 931.0000000000002
+        y: 416
+      size: {}
+    id: f6f9fdf9-c5d5-4b80-b4a8-75d574fd78f2
+    name: Combine Text
+    node_config:
+      label: Combine Text
+      template: ((Input 1))rewqttt
+    type: ComposeTextNode
+  - connector_config:
+      inputs:
+      - choices:
+        - data_type: str
+          is_list: false
+        - data_type: number
+          is_list: false
+        - data_type: bool
+          is_list: false
+        - data_type: datetime
+          is_list: false
+        - data_type: object
+          is_list: false
+        - data_type: dict
+          is_list: false
+        - data_type: Image
+          is_list: false
+        - data_type: File
+          is_list: false
+        - data_type: Audio
+          is_list: false
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Output Value
+        name: input
+        optional: false
+        propagates_list: true
+        rules:
+        - config_source: type
+          type: type_set_by
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_type_connector
+        visible: true
+      outputs:
+      - choices:
+        - data_type: str
+          is_list: false
+        - data_type: number
+          is_list: false
+        - data_type: bool
+          is_list: false
+        - data_type: datetime
+          is_list: false
+        - data_type: object
+          is_list: false
+        - data_type: dict
+          is_list: false
+        - data_type: Image
+          is_list: false
+        - data_type: File
+          is_list: false
+        - data_type: Audio
+          is_list: false
+        configured_by: type
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Output
+        name: output
+        optional: false
+        propagates_list: true
+        rules:
+        - config_source: type
+          type: type_set_by
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_type_output
+        visible: true
+    display:
+      position:
+        x: 1391.0000000000002
+        y: 416
+      size: {}
+    id: 0f00075e-df90-4bf7-9755-92773b2ab0ef
+    name: Output 1
+    node_config:
+      label: Output 1
+    type: OutputNode
