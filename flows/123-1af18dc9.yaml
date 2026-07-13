@@ -22,6 +22,13 @@ spec:
     to_id:
       connector_name: input
       node_id: f8834edd-5dfb-43b4-b88b-4717fbf38a2f
+  - from_id:
+      connector_name: text_output
+      node_id: 5970a901-b594-4e3e-aa5a-12b5fba75a4c
+    to_id:
+      connector_name: variables
+      key: Input 1
+      node_id: df73dd09-49a5-4db6-8a20-cf31f594dad5
   nodes:
   - connector_config:
       inputs:
@@ -326,3 +333,64 @@ spec:
           type: doc
         text: ggg
     type: TextGenerationV8Node
+  - connector_config:
+      inputs:
+      - allow_empty: false
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        keys:
+        - Input 1
+        label: Inputs
+        manual: true
+        name: variables
+        optional: true
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_connector
+        visible: true
+      outputs:
+      - definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Output
+        name: output
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: true
+      - definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: On error
+        name: on_error
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: false
+    display:
+      position:
+        x: 1044.0833333333333
+        y: 686.5
+      size: {}
+    id: df73dd09-49a5-4db6-8a20-cf31f594dad5
+    name: Join paths
+    node_config: {}
+    type: OrNode
