@@ -1,0 +1,18 @@
+apiVersion: noxus/v4
+kind: connection
+metadata:
+  description: null
+  id: 68f86a25-eeda-4970-b734-a638bee768bc
+  labels: {}
+  name: Git repository 1
+  slug: git-repository-1-68f86a25
+schemaVersion: 1
+spec:
+  auth_method: secret_auth
+  display_name: Git repository 1
+  integration_type: generic_git
+  metadata:
+    default_branch: main
+    last_validated: '2026-07-13T02:44:04.274308'
+    repo_url: https://github.com/lawst-code/gitops-test
+  provider_key: generic_git_secret_auth

@@ -1,0 +1,10 @@
+apiVersion: noxus/v4
+exportOptions:
+  setActiveOnImport: false
+kind: Bundle
+metadata:
+  exportedAt: null
+  exportedBy: null
+  noxusVersion: null
+  sourceWorkspace: ayy
+  sourceWorkspaceId: abf8d108-cf28-40b1-852a-f0a89a1c2158
