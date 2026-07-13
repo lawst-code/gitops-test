@@ -1,0 +1,109 @@
+apiVersion: noxus/v4
+kind: flow_version
+metadata:
+  description: null
+  id: f7bef04a-6f68-4bef-88bc-1bba2112202d
+  labels: {}
+  name: '1'
+  slug: gt-1-f7bef04a
+schemaVersion: 1
+spec:
+  definition:
+    edges:
+    - id: b52bc558-e536-48e2-a450-3d9c1ac6a070
+      source: f1f13ec9-23ff-42cc-b6ce-e3d0deda0315
+      source_handle: output
+      target: 6cfb2177-5af5-446c-a74e-183081f31920
+      target_handle: input
+    - id: 13a866b4-7dcb-48f6-b6bc-a6041fb57898
+      source: 6cfb2177-5af5-446c-a74e-183081f31920
+      source_handle: output
+      target: 38e755b1-53d9-4de1-b17b-c4b5e71866fb
+      target_handle: input
+    flow_version: v2
+    nodes:
+    - display:
+        position:
+          x: 223.39999999999998
+          y: 389.20000000000005
+      id: f1f13ec9-23ff-42cc-b6ce-e3d0deda0315
+      name: Input 1
+      node_config:
+        default_on_error_value_string: <ERROR>
+        fallback_text: <ERROR>
+        fixed_value: false
+        has_on_error_output: false
+        is_tool: false
+        label: Input 1
+        mocked: false
+        modifiable_on_run: true
+        on_error_action: fail
+        on_error_behavior: fail
+        optional: false
+        retry_attempts: 3
+        retry_backoff: fixed
+        retry_count: 3
+        retry_delay: 5
+        retry_enabled: false
+        retry_interval: 5
+        retry_strategy: fixed_delay
+        type: str
+      type: InputNodeV2
+      variable_bindings: {}
+    - display:
+        pinned_fields:
+        - template
+        position:
+          x: 643.4
+          y: 389.20000000000005
+      id: 6cfb2177-5af5-446c-a74e-183081f31920
+      name: Combine Text
+      node_config:
+        default_on_error_value_string: <ERROR>
+        fallback_text: <ERROR>
+        has_on_error_output: false
+        is_tool: false
+        label: ''
+        mocked: false
+        on_error_action: fail
+        on_error_behavior: fail
+        retry_attempts: 3
+        retry_backoff: fixed
+        retry_count: 3
+        retry_delay: 5
+        retry_enabled: false
+        retry_interval: 5
+        retry_strategy: fixed_delay
+        template: rr :var[f1f13ec9-23ff-42cc-b6ce-e3d0deda0315.output]
+      type: CombineTextV2
+      variable_bindings: {}
+    - display:
+        position:
+          x: 1063.4
+          y: 389.20000000000005
+      id: 38e755b1-53d9-4de1-b17b-c4b5e71866fb
+      name: Output 1
+      node_config:
+        default_on_error_value_string: <ERROR>
+        fallback_text: <ERROR>
+        has_on_error_output: false
+        is_list: false
+        is_tool: false
+        label: Output 1
+        mocked: false
+        on_error_action: fail
+        on_error_behavior: fail
+        retry_attempts: 3
+        retry_backoff: fixed
+        retry_count: 3
+        retry_delay: 5
+        retry_enabled: false
+        retry_interval: 5
+        retry_strategy: fixed_delay
+        type: str
+        value: :var[6cfb2177-5af5-446c-a74e-183081f31920.text_output]
+      type: OutputNodeV2
+      variable_bindings: {}
+  description: ''
+  name: '1'
+  workflow_id: 0e42ed06-a56c-44c6-a653-1aa1e2b722c2

@@ -2,26 +2,26 @@ apiVersion: noxus/v4
 kind: flow
 metadata:
   description: null
-  id: 15d02ec3-458c-4d94-9bef-d5708616ac54
+  id: 1af18dc9-c99e-489b-b372-3ae28791fb2f
   labels: {}
-  name: rrr
-  slug: rrr-15d02ec3
+  name: '123'
+  slug: 123-1af18dc9
 schemaVersion: 1
 spec:
   edges:
   - from_id:
       connector_name: output
-      node_id: 67361bec-1c60-4fac-8f14-5b50d849c9ba
+      node_id: fa0d6cf5-2463-49ed-95eb-89d1ca177a6c
     to_id:
-      connector_name: variables
+      connector_name: inputs
       key: Input 1
-      node_id: f6f9fdf9-c5d5-4b80-b4a8-75d574fd78f2
+      node_id: 5970a901-b594-4e3e-aa5a-12b5fba75a4c
   - from_id:
       connector_name: text_output
-      node_id: f6f9fdf9-c5d5-4b80-b4a8-75d574fd78f2
+      node_id: 5970a901-b594-4e3e-aa5a-12b5fba75a4c
     to_id:
       connector_name: input
-      node_id: 0f00075e-df90-4bf7-9755-92773b2ab0ef
+      node_id: f8834edd-5dfb-43b4-b88b-4717fbf38a2f
   nodes:
   - connector_config:
       inputs:
@@ -101,77 +101,14 @@ spec:
         visible: true
     display:
       position:
-        x: 583
-        y: 416
+        x: 425.66666666666663
+        y: 369
       size: {}
-    id: 67361bec-1c60-4fac-8f14-5b50d849c9ba
+    id: fa0d6cf5-2463-49ed-95eb-89d1ca177a6c
     name: Input 1
     node_config:
       label: Input 1
     type: InputNode
-  - connector_config:
-      inputs:
-      - allow_empty: false
-        definition:
-          data_type: str
-          is_list: false
-        description: null
-        keys:
-        - Input 1
-        label: Variables
-        manual: true
-        name: variables
-        optional: false
-        propagates_list: true
-        rules: []
-        tool_argument: false
-        tool_argument_description: null
-        tool_argument_optional: false
-        tool_mode: hidden
-        type: variable_connector
-        visible: true
-      outputs:
-      - definition:
-          data_type: str
-          is_list: false
-        description: null
-        label: Text
-        name: text_output
-        optional: false
-        propagates_list: true
-        rules: []
-        tool_argument: false
-        tool_argument_description: null
-        tool_argument_optional: false
-        tool_mode: hidden
-        type: connector
-        visible: true
-      - definition:
-          data_type: str
-          is_list: false
-        description: null
-        label: On error
-        name: on_error
-        optional: false
-        propagates_list: true
-        rules: []
-        tool_argument: false
-        tool_argument_description: null
-        tool_argument_optional: false
-        tool_mode: hidden
-        type: connector
-        visible: false
-    display:
-      position:
-        x: 931.0000000000002
-        y: 416
-      size: {}
-    id: f6f9fdf9-c5d5-4b80-b4a8-75d574fd78f2
-    name: Combine Text
-    node_config:
-      label: Combine Text
-      template: ((Input 1))rewq
-    type: ComposeTextNode
   - connector_config:
       inputs:
       - choices:
@@ -250,11 +187,142 @@ spec:
         visible: true
     display:
       position:
-        x: 1391.0000000000002
-        y: 416
+        x: 1081.1666666666665
+        y: 379.83333333333337
       size: {}
-    id: 0f00075e-df90-4bf7-9755-92773b2ab0ef
+    id: f8834edd-5dfb-43b4-b88b-4717fbf38a2f
     name: Output 1
     node_config:
       label: Output 1
     type: OutputNode
+  - connector_config:
+      inputs:
+      - choices:
+        - data_type: str
+          is_list: false
+        - data_type: File
+          is_list: false
+        - data_type: dict
+          is_list: false
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        gathered_keys: []
+        keys:
+        - Input 1
+        label: Input
+        manual: true
+        name: inputs
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_type_size_connector
+        type_definitions:
+          Input 1:
+            data_type: str
+            is_list: false
+        visible: true
+      outputs:
+      - definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: Response
+        name: text_output
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: true
+      - allow_empty: false
+        definition:
+          data_type: str
+          is_list: false
+        description: null
+        keys:
+        - name
+        label: Fields
+        manual: false
+        name: outputs
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: variable_connector
+        visible: false
+      - definition:
+          data_type: File
+          is_list: false
+        description: null
+        label: Image
+        name: image_output
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: false
+      - definition:
+          data_type: str
+          is_list: false
+        description: null
+        label: On error
+        name: on_error
+        optional: false
+        propagates_list: true
+        rules: []
+        tool_argument: false
+        tool_argument_description: null
+        tool_argument_optional: false
+        tool_mode: hidden
+        type: connector
+        visible: false
+    display:
+      position:
+        x: 676.9999999999999
+        y: 493.16666666666663
+      size: {}
+    id: 5970a901-b594-4e3e-aa5a-12b5fba75a4c
+    name: Generate Text
+    node_config:
+      json_fields:
+      - Description: The person's name
+        Name: name
+        Type: Text
+      - Description: The person's age
+        Name: age
+        Type: Integer
+      label: Generate Text
+      model:
+      - preset:performance
+      prompt_template:
+      - definition:
+          content:
+          - attrs: null
+            content:
+            - attrs: null
+              content: null
+              marks: null
+              text: ggg
+              type: text
+            marks: null
+            text: null
+            type: paragraph
+          type: doc
+        text: ggg
+    type: TextGenerationV8Node
